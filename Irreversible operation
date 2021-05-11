@@ -1,0 +1,23 @@
+//question link -https://atcoder.jp/contests/agc029/tasks/agc029_a
+
+//Solution
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main() {
+    string s;
+    cin>>s;
+    ll count=0,count1=0;
+    ll len=s.size();
+    if(len==2 && (s[0]=='B'&&s[1]=='W'))
+    return 1;
+    for(ll i=0;i<len;i++){
+        if(s[i]=='W'){
+            count+=count1;
+        }
+        else count1++;
+    }
+    cout<<count<<endl;
+    return 0;
+}
